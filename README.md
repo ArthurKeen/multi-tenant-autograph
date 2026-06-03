@@ -101,9 +101,9 @@ npm run preview  # preview the production build
 In the UI, for each tenant: **Load sample docs → Ingest & activate**, watch the live status,
 then chat. Try the amber **isolation probes** to confirm cross-tenant queries return nothing.
 
-> _Screenshot:_ add a capture of the running UI at `docs/ui.png` and it will render here.
-
 ## Demo script
+
+![Multi-Tenant GraphRAG Isolation Prototype UI — a tenant's onboarding pipeline (left) and partition-scoped chat (right)](docs/ui.png)
 
 A repeatable ~10-minute walkthrough that proves tenant isolation:
 
