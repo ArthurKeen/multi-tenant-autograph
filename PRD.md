@@ -115,6 +115,32 @@ and the prototype **must** account for them:
 > Reference implementation of all of the above lives in `scripts/deploy_services.py`
 > (service deployment) and `scripts/smoke_test.py` (full pipeline + isolation checks).
 
+### 2.4 Multi-tenant ingestion challenges (modules as tenants)
+
+Using one **module per tenant** keeps tenant *data* cleanly isolated (no cross-module
+similarity/clustering; queries filter by `partition_ids`). The challenges are all on the
+**onboarding / operations** side, and a real multi-tenant deployment must account for them:
+
+1. **Onboarding is one tenant at a time.** Each `import-multiple` call tags a single module
+   and **wipes the previously staged import**, so you cannot load several tenants in one pass —
+   it is import-and-build Tenant A, then B, then C.
+2. **Tenant operations cannot run in parallel.** AutoGraph allows only **one corpus build and
+   one orchestration at a time** per instance (HTTP 409 otherwise). Tenant B's onboarding waits
+   for Tenant A's to finish.
+3. **Filename collisions silently break isolation.** File Manager resolves files by **basename
+   across the whole database**, not per module. Two tenants uploading `overview.txt` collide on
+   one `file_id`, and the importer can fetch one tenant's bytes for the other. **Mitigation:**
+   make filenames globally unique per tenant (this prototype prefixes every doc with the module,
+   e.g. `tenant_a_overview.txt`).
+4. **One stuck job blocks every tenant.** All tenants share one control plane, so a hung
+   build/orchestration freezes onboarding for everyone — and there is no per-tenant cancel; you
+   restart the service to clear the in-memory lock.
+5. **Throughput does not scale with tenant count.** Because operations serialize, onboarding N
+   tenants is N sequential build + extraction jobs, not N in parallel.
+
+**Bottom line:** data isolation is solid; the constraints are operational — ingestion is
+sequential, shared, and filename-sensitive, which matters at scale (many tenants).
+
 ---
 
 ## 3. User Stories

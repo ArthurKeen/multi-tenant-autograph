@@ -101,6 +101,34 @@ npm run preview  # preview the production build
 In the UI, for each tenant: **Load sample docs → Ingest & activate**, watch the live status,
 then chat. Try the amber **isolation probes** to confirm cross-tenant queries return nothing.
 
+> _Screenshot:_ add a capture of the running UI at `docs/ui.png` and it will render here.
+
+## Demo script
+
+A repeatable ~10-minute walkthrough that proves tenant isolation:
+
+1. **Onboard the tenants.** For **Tenant A**: click **Load sample docs (Tenant A)** → **Ingest &
+   activate Tenant A**. Watch the live status go through upload → import → corpus build →
+   strategizer → knowledge graph. Wait for the green **"ready"** dot (it only turns green once
+   the graph is actually queryable). Repeat for **Tenant B** and **Tenant C**.
+   - Onboarding is sequential by design — one tenant builds at a time (see PRD §2.4).
+2. **Positive query.** With **Tenant A** selected, click the suggestion **"What is Project
+   Ironclad?"** → you get a detailed answer about Northwind Grid Authority's substation program.
+   Note the **"scoped to partitions: tenant_a_0_a"** indicator under the chat header.
+3. **The isolation money shot.** Switch the dropdown to **Tenant B**, then click the amber
+   isolation probe **"What is Project Ironclad?"** → it returns **"No relevant data found."**
+   Same data, same shared knowledge graph — but Tenant B cannot see Tenant A's content.
+4. **Prove it both ways.** As **Tenant C**, probe **"What is Project Tidewatch?"** (Tenant B's
+   project) → nothing. As **Tenant A**, probe **"What is Project Helios Fields?"** (Tenant C's
+   project) → nothing. Each tenant only answers about its own projects.
+5. **(Optional) Headless proof.** Run `python3 scripts/smoke_test.py` to execute the same
+   isolation checks from the terminal and print PASS/FAIL.
+
+**Talking points while it runs:** isolation is enforced **server-side** (module scoping at
+ingest, `partition_ids` filtering at query) — the tenant dropdown is just a demo convenience.
+The same documents live in one shared ArangoDB knowledge graph; only the partition scoping
+keeps them apart.
+
 ## Test data
 
 `test-data/` contains three fictional, energy-sector tenant document sets with **disjoint**
