@@ -102,23 +102,23 @@ function backendProxy(env: Record<string, string>) {
       : [];
     const hasDocs = cols.includes(`${db}_Documents`);
     const hasEntities = cols.includes(`${db}_Entities`);
-    const byPartition: Record<string, { documents: number; entities: number }> = {};
-    const add = (p: string, key: "documents" | "entities", n: number) => {
-      byPartition[p] = byPartition[p] || { documents: 0, entities: 0 };
+    const hasCommunities = cols.includes(`${db}_Communities`);
+    type Counts = { documents: number; entities: number; communities: number };
+    const byPartition: Record<string, Counts> = {};
+    const add = (p: string, key: keyof Counts, n: number) => {
+      byPartition[p] = byPartition[p] || { documents: 0, entities: 0, communities: 0 };
       byPartition[p][key] = n;
     };
-    if (hasDocs) {
+    const countBy = async (coll: string, key: keyof Counts) => {
       for (const row of (await aql(
-        `FOR d IN ${db}_Documents COLLECT p = d.partition_id WITH COUNT INTO n RETURN {p, n}`,
+        `FOR x IN ${coll} COLLECT p = x.partition_id WITH COUNT INTO n RETURN {p, n}`,
       )) as Array<{ p: string; n: number }>)
-        add(row.p, "documents", row.n);
-    }
-    if (hasEntities) {
-      for (const row of (await aql(
-        `FOR e IN ${db}_Entities COLLECT p = e.partition_id WITH COUNT INTO n RETURN {p, n}`,
-      )) as Array<{ p: string; n: number }>)
-        add(row.p, "entities", row.n);
-    }
+        add(row.p, key, row.n);
+    };
+    if (hasDocs) await countBy(`${db}_Documents`, "documents");
+    if (hasEntities) await countBy(`${db}_Entities`, "entities");
+    // Communities are built after entity embeddings, so they signal query-readiness.
+    if (hasCommunities) await countBy(`${db}_Communities`, "communities");
     return { layer3Exists: hasDocs, byPartition };
   }
 

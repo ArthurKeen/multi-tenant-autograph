@@ -7,7 +7,7 @@ interface Props {
   messages: ChatMessage[];
   busy: boolean;
   onSend: (text: string) => void;
-  kg: { documents: number; entities: number };
+  kg: { documents: number; entities: number; communities: number };
   orchestrating: boolean;
   awaiting: boolean;
 }
@@ -23,21 +23,28 @@ export function Chat({
   awaiting,
 }: Props) {
   const [text, setText] = useState("");
-  const ready = partitionIds.length > 0;
-  const kgReady = kg.entities > 0;
+  const hasPartitions = partitionIds.length > 0;
+  // Query-ready only once communities exist (entity embeddings/index are done by then).
+  const kgReady = kg.communities > 0;
+  const ready = hasPartitions && kgReady;
 
   let kgState: { cls: string; text: string };
-  if (!ready) {
-    kgState = { cls: "idle", text: "no partitions yet — run Strategize + orchestrate" };
+  if (!hasPartitions) {
+    kgState = { cls: "idle", text: "not built yet — onboard this tenant first" };
   } else if (kgReady) {
     kgState = {
       cls: "ready",
-      text: `ready · ${kg.entities} entities, ${kg.documents} docs`,
+      text: `ready · ${kg.entities} entities, ${kg.communities} communities, ${kg.documents} docs`,
+    };
+  } else if (kg.entities > 0) {
+    kgState = {
+      cls: "running",
+      text: `finalizing — building embeddings & communities… (${kg.entities} entities, not queryable yet)`,
     };
   } else if (orchestrating) {
-    kgState = { cls: "running", text: "building knowledge graph… (no entities yet)" };
+    kgState = { cls: "running", text: "building knowledge graph…" };
   } else {
-    kgState = { cls: "idle", text: "not built yet — run Strategize + orchestrate" };
+    kgState = { cls: "idle", text: "not built yet — onboard this tenant first" };
   }
 
   return (
@@ -50,14 +57,14 @@ export function Chat({
       </div>
       <div className="chat__scope">
         scoped to partitions:{" "}
-        {ready ? (
+        {hasPartitions ? (
           partitionIds.map((p) => (
             <code key={p} className="chip">
               {p}
             </code>
           ))
         ) : (
-          <em>none yet — run strategize + orchestrate first</em>
+          <em>none yet — onboard this tenant first</em>
         )}
       </div>
 

@@ -99,7 +99,7 @@ export async function orchestrate(partitionIds?: string[]): Promise<void> {
 
 export interface KgStatus {
   layer3Exists: boolean;
-  byPartition: Record<string, { documents: number; entities: number }>;
+  byPartition: Record<string, { documents: number; entities: number; communities: number }>;
 }
 
 export async function getKgStatus(): Promise<KgStatus> {

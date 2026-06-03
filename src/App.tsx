@@ -103,10 +103,11 @@ export default function App() {
           if (c) {
             acc.documents += c.documents;
             acc.entities += c.entities;
+            acc.communities += c.communities;
           }
           return acc;
         },
-        { documents: 0, entities: 0 },
+        { documents: 0, entities: 0, communities: 0 },
       ),
     [kg, partitionIds],
   );
@@ -230,16 +231,25 @@ export default function App() {
         await sleep(5000);
         const ks = await getKgStatus();
         setKg(ks);
-        const ent = parts.reduce((a, p) => a + (ks.byPartition[p]?.entities || 0), 0);
-        const docs = parts.reduce((a, p) => a + (ks.byPartition[p]?.documents || 0), 0);
-        detail(`Building knowledge graph… ${el()}s elapsed — ${ent} entities, ${docs} docs`);
-        if (ent > 0) {
+        const sum = (key: "entities" | "documents" | "communities") =>
+          parts.reduce((a, p) => a + (ks.byPartition[p]?.[key] || 0), 0);
+        const ent = sum("entities");
+        const comm = sum("communities");
+        // Ready only once communities exist — entity embeddings/index are done by then,
+        // so local search can actually retrieve (avoids the "ready but no answers" race).
+        if (comm > 0) {
+          detail(`Knowledge graph ready — ${ent} entities, ${comm} communities, ${sum("documents")} docs`);
           ready = true;
           break;
         }
+        if (ent > 0) {
+          detail(`Finalizing: building entity embeddings & communities… ${el()}s (${ent} entities)`);
+        } else {
+          detail(`Building knowledge graph… ${el()}s elapsed`);
+        }
       }
       if (ready) {
-        logLine(id, "knowledge graph: ready");
+        logLine(id, "knowledge graph: ready (communities built)");
         patch(id, { orchestrate: "done", detail: `${label} is ready — chat now.` });
       } else {
         logLine(id, "knowledge graph: still building after timeout");
