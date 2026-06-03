@@ -1,0 +1,33 @@
+# Environment / secrets -- never commit real cluster details or tokens
+.env
+.env.*
+!.env.example
+
+# Node / Vite
+node_modules/
+dist/
+dist-ssr/
+*.local
+.vite/
+*.tsbuildinfo
+
+# Python (PDF generation script / optional tooling)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Generated PDFs (regenerate from .txt sources via test-data/generate_pdfs.py)
+test-data/**/*.pdf

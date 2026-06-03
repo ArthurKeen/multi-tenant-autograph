@@ -1,0 +1,38 @@
+Verdant Power Developments — Organizational Overview
+(FICTIONAL TEST DATA — Tenant C)
+
+Verdant Power Developments (VPD) is a fictional renewable energy developer that originates,
+builds, and finances utility-scale solar and wind projects. VPD does not operate a
+transmission grid or sell retail electricity; it develops generation assets and sells their
+output under long-term power purchase agreements.
+
+Mission
+VPD's mission is to bring low-cost renewable generation online quickly by managing the full
+development lifecycle: site control, interconnection, permitting, financing, and
+construction handover.
+
+Development pipeline
+- Project Helios Fields: a utility-scale solar farm at the Dunesong site (flagship project).
+- Windward Bluffs: an onshore wind project on a coastal ridge.
+- Several earlier-stage prospects under land option.
+
+Key sites
+- Dunesong: a high-irradiance desert plateau hosting Project Helios Fields.
+- Windward Bluffs: a consistently windy coastal ridgeline.
+
+Commercial approach
+VPD sells output through the Greenline PPA framework — its standardized long-term offtake
+contract template used to de-risk financing. Greenline PPAs are structured for creditworthy
+offtakers seeking fixed-price renewable energy.
+
+Leadership
+The development group is led by Head of Development Priya Raman, who owns site origination,
+the interconnection strategy, and Greenline PPA negotiations across the pipeline.
+
+Stage gates
+VPD advances projects through five internal gates: site control, interconnection feasibility,
+permitting, financing close, and notice to proceed. Project Helios Fields is the most
+advanced asset in the pipeline.
+
+All names, sites, projects, and figures in this document are fictional and exist only to
+test multi-tenant data isolation.

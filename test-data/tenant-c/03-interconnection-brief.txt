@@ -1,0 +1,33 @@
+Windward Bluffs & Pipeline Interconnection Brief
+(FICTIONAL TEST DATA — Tenant C)
+
+Prepared by: Verdant Power Developments, Development Group
+Author: Priya Raman, Head of Development
+
+1. Pipeline overview
+This brief covers the interconnection status of VPD's two lead projects: Project Helios
+Fields at the Dunesong site and the Windward Bluffs wind project on the coastal ridge.
+
+2. Project Helios Fields (Dunesong)
+The Dunesong interconnection feasibility study confirmed deliverability with only minor
+network upgrades. Project Helios Fields holds a queue position consistent with its target
+financing close, and the co-located battery improves its interconnection efficiency.
+
+3. Windward Bluffs (wind)
+Windward Bluffs is a fictional 300 MW onshore wind project on a consistently windy coastal
+ridgeline. Its interconnection feasibility study is underway. Wake modeling across the ridge
+informs turbine layout, and VPD is evaluating whether to pair the project with storage like
+the Dunesong design.
+
+4. Commercial path
+Both projects are being marketed under the Greenline PPA framework. Project Helios Fields is
+already committed under a 20-year Greenline PPA; Windward Bluffs offtake is in negotiation
+with prospective corporate buyers.
+
+5. Next steps
+- Close financing on Project Helios Fields and issue notice to proceed at Dunesong.
+- Advance the Windward Bluffs interconnection study and finalize turbine selection.
+- Standardize the Greenline PPA terms across the remaining pipeline prospects.
+
+All sites, projects, names, and figures are fictional and exist solely to exercise
+multi-tenant data isolation in the GraphRAG prototype.

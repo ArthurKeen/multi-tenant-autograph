@@ -1,0 +1,35 @@
+Northwind Grid Authority — Organizational Overview
+(FICTIONAL TEST DATA — Tenant A)
+
+Northwind Grid Authority (NGA) is a fictional independent transmission system operator
+responsible for planning and operating the high-voltage electricity backbone of the
+Cascadia North region. NGA does not generate or retail electricity; it coordinates the
+reliable bulk transfer of power across 12,400 kilometers of transmission lines and 84
+substations on behalf of connected generators and distribution utilities.
+
+Mission
+NGA's mandate is to keep the Cascadia North grid reliable, balanced, and open to fair
+access. The organization maintains the regional transmission plan, administers
+interconnection requests, and operates the real-time control center in the city of
+Harbormere.
+
+Operating regions
+- Cascadia North Core: dense urban load centers around Harbormere and Fort Lindel.
+- Cascadia North Highlands: mountainous corridors carrying hydro power south.
+- Cascadia North Coast: coastal corridors integrating offshore and onshore wind imports.
+
+Key assets
+- Mistral Substation: NGA's largest 500 kV switching station, located outside Fort Lindel.
+- Aurora Interconnect: the 500 kV double-circuit line linking the Highlands hydro fleet to
+  the Core load center.
+- Harbormere Control Center: the 24/7 balancing-authority operations hub.
+
+Leadership
+The grid operations group is led by Chief Reliability Engineer Dana Holloway, who oversees
+transmission planning, the interconnection queue, and major capital programs such as the
+Project Ironclad substation modernization initiative.
+
+Governance
+NGA operates under a regional reliability charter and reports reliability metrics quarterly
+to the Cascadia North Reliability Council. All figures, names, and projects in this document
+are fictional and exist only to test multi-tenant data isolation.

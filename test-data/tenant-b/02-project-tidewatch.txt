@@ -1,0 +1,37 @@
+Project Tidewatch — Residential Demand-Response Program
+(FICTIONAL TEST DATA — Tenant B)
+
+Summary
+Project Tidewatch is Solara Energy Retail's flagship residential demand-response program in
+the Sunbelt Metro territory. It enrolls customers on the FlexPeak tariff into automated
+load-shifting events and rewards participation through EcoReward points. The program is led
+by Program Manager Marcus Okafor.
+
+Goal
+Reduce SER's contracted peak purchases during the Sunbelt Metro summer system peak by a
+fictional target of 75 MW, lowering wholesale costs and passing savings back to customers.
+
+How it works
+1. Customers on the FlexPeak tariff opt in to Project Tidewatch and connect a smart
+   thermostat or smart water heater.
+2. On high-price days, SER dispatches a Tidewatch event: connected devices pre-cool or shift
+   load before the Sunbelt Metro peak window.
+3. Verified reductions earn EcoReward points, and customers can opt out of any single event
+   without losing their tariff benefits.
+
+Enrollment tiers
+- Tidewatch Basic: thermostat-only participation.
+- Tidewatch Plus: thermostat plus water heater, higher EcoReward multipliers.
+- Tidewatch Community: multi-family buildings in Sunbelt Metro Central enrolled in bulk.
+
+Results to date
+In its first fictional summer, Project Tidewatch enrolled 48,000 homes and delivered an
+average event reduction of 61 MW, approaching the 75 MW target. EcoReward redemptions rose
+sharply, improving customer retention on the FlexPeak tariff.
+
+Roadmap
+- Add behavioral nudges through the SER mobile app.
+- Extend Project Tidewatch to small-commercial accounts in Sunbelt Metro West.
+- Integrate rooftop-solar export signals into event dispatch.
+
+All details are fictional and used only for isolation testing.

@@ -1,0 +1,37 @@
+Project Ironclad — Substation Modernization Program
+(FICTIONAL TEST DATA — Tenant A)
+
+Summary
+Project Ironclad is Northwind Grid Authority's flagship capital program to modernize aging
+500 kV and 230 kV substation equipment across the Cascadia North region. The program runs
+from fiscal year 1 through fiscal year 5 and is sponsored by Chief Reliability Engineer
+Dana Holloway.
+
+Objectives
+1. Replace end-of-life oil-filled circuit breakers at Mistral Substation with modern
+   SF6-free vacuum interrupters.
+2. Deploy digital protection relays and IEC 61850 process-bus communications at the eight
+   highest-risk substations.
+3. Add redundant control and protection at the Aurora Interconnect terminals to eliminate
+   single points of failure.
+
+Phases
+- Phase 1 (Mistral Substation): full breaker replacement and relay upgrade. This is the
+  anchor site for Project Ironclad and the proving ground for the digital protection design.
+- Phase 2 (Highlands corridor): protection upgrades on the Aurora Interconnect terminals.
+- Phase 3 (Coast corridor): substation automation at the coastal wind-import stations.
+
+Budget and schedule
+The program carries a fictional capital budget of 410 million credits. Phase 1 at Mistral
+Substation is scheduled for an 18-month outage-coordinated rollout, sequenced around
+Cascadia North Core peak-load seasons to avoid reliability impacts.
+
+Risks
+- Long-lead procurement for 500 kV breakers.
+- Outage coordination on the Aurora Interconnect, which carries critical Highlands hydro.
+- Workforce availability for IEC 61850 commissioning.
+
+Expected outcome
+On completion, Project Ironclad is expected to reduce forced-outage rates at Mistral
+Substation by an estimated 60 percent and bring the Aurora Interconnect to N-1-1 protection
+redundancy. All details are fictional and used only for isolation testing.

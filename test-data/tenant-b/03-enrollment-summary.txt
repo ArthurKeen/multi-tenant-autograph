@@ -1,0 +1,32 @@
+FlexPeak & EcoReward — Quarterly Enrollment Summary
+(FICTIONAL TEST DATA — Tenant B)
+
+Prepared by: Solara Energy Retail, Demand-Side Coordination
+Author: Marcus Okafor, Program Manager
+
+1. Retail enrollment
+SER closed the quarter with a fictional 320,000 active accounts across Sunbelt Metro. Net
+adds were strongest in Sunbelt Metro South, driven by summer air-conditioning customers
+seeking the FlexPeak tariff.
+
+2. FlexPeak tariff
+FlexPeak enrollment reached 128,000 accounts (40 percent of the book). Customers on FlexPeak
+shifted an average of 14 percent of their peak-window usage, reducing SER's exposure to
+wholesale peak prices.
+
+3. EcoReward program
+EcoReward issued points to 110,000 households this quarter. Redemptions were concentrated in
+bill credits. The highest point earners were Project Tidewatch Plus participants who shifted
+load during dispatched events.
+
+4. Project Tidewatch
+Project Tidewatch grew to 48,000 enrolled homes. Event participation averaged 88 percent,
+and opt-outs stayed below the 5 percent threshold that triggers a program review. The team
+is preparing the Sunbelt Metro West small-commercial expansion.
+
+5. Customer satisfaction
+Survey scores were highest among EcoReward redeemers and Tidewatch participants, reinforcing
+the link between demand-side engagement and retention on the FlexPeak tariff.
+
+All metrics, programs, and names are fictional and exist solely to exercise multi-tenant
+data isolation in the GraphRAG prototype.

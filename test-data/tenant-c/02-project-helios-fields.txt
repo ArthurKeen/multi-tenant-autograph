@@ -1,0 +1,38 @@
+Project Helios Fields — Utility-Scale Solar Development
+(FICTIONAL TEST DATA — Tenant C)
+
+Summary
+Project Helios Fields is Verdant Power Developments' flagship utility-scale solar farm,
+sited on the Dunesong plateau. The project is led by Head of Development Priya Raman and is
+contracted under a Greenline PPA.
+
+Project specifications
+- Nameplate capacity: a fictional 450 MW of single-axis tracking photovoltaic arrays.
+- Location: the Dunesong site, chosen for high solar irradiance and gentle terrain.
+- Storage: a co-located 120 MW / 480 MWh battery to firm output and shift evening delivery.
+
+Development status
+Project Helios Fields has cleared site control, interconnection feasibility, and permitting,
+and is approaching financing close. The Dunesong interconnection study identified only minor
+network upgrades, keeping the project on its target schedule.
+
+Offtake
+The full output of Project Helios Fields is committed under a 20-year Greenline PPA to a
+creditworthy corporate offtaker seeking fixed-price renewable supply. The Greenline structure
+allowed VPD to secure favorable construction financing terms.
+
+Construction plan
+- Mobilization and civil works at the Dunesong site.
+- Tracker and module installation across the plateau in sequenced blocks.
+- Battery integration and commissioning.
+- Handover to a long-term operations contractor.
+
+Risks
+- Supply-chain timing for trackers and battery cells.
+- Heat and dust mitigation during Dunesong summer construction.
+- Coordination of the storage dispatch profile with the Greenline PPA delivery terms.
+
+Expected outcome
+Once energized, Project Helios Fields is expected to be VPD's largest operating asset and the
+template for replicating the Dunesong-plus-storage model at future sites. All details are
+fictional and used only for isolation testing.

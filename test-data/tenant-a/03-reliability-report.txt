@@ -1,0 +1,32 @@
+Cascadia North Quarterly Reliability Report
+(FICTIONAL TEST DATA — Tenant A)
+
+Prepared by: Northwind Grid Authority, Harbormere Control Center
+Author: Dana Holloway, Chief Reliability Engineer
+
+1. System conditions
+The Cascadia North grid met all firm load this quarter with no involuntary load shedding.
+Peak demand reached a fictional 18,900 MW during a cold snap in the Core region, served
+largely by Highlands hydro delivered over the Aurora Interconnect.
+
+2. Transmission performance
+- Aurora Interconnect availability: 99.7 percent. One planned outage was coordinated for
+  Project Ironclad Phase 2 protection commissioning.
+- Mistral Substation: operated within ratings throughout the quarter. Phase 1 of Project
+  Ironclad reduced relay misoperations at the station to zero.
+
+3. Interconnection queue
+NGA processed 14 new interconnection requests, dominated by coastal wind imports along the
+Cascadia North Coast corridor. None required network upgrades beyond existing plans.
+
+4. Notable events
+- A lightning storm in the Highlands caused a momentary trip on one Aurora Interconnect
+  circuit; the redundant circuit held and no load was lost. This event reinforced the
+  rationale for the Project Ironclad redundancy upgrades at the interconnect terminals.
+
+5. Outlook
+NGA expects tight reserves during the upcoming Highlands maintenance season and will
+sequence remaining Project Ironclad outages at Mistral Substation accordingly.
+
+All metrics, place names, and events in this report are fictional and exist solely to
+exercise multi-tenant data isolation in the GraphRAG prototype.

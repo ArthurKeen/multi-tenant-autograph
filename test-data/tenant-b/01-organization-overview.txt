@@ -1,0 +1,35 @@
+Solara Energy Retail — Organizational Overview
+(FICTIONAL TEST DATA — Tenant B)
+
+Solara Energy Retail (SER) is a fictional competitive electricity retailer serving
+residential and small-commercial customers across the Sunbelt Metro service territory.
+SER buys wholesale power and sells retail plans; it does not own transmission lines or
+generation assets. Its competitive edge is demand-side coordination — helping customers
+shift and reduce usage during expensive peak periods.
+
+Mission
+SER's mission is to give Sunbelt Metro customers lower bills and a smaller footprint through
+smart tariffs, connected devices, and rewards for flexible energy use.
+
+Service territory
+- Sunbelt Metro Central: high-density apartments and small businesses.
+- Sunbelt Metro South: suburban single-family homes with high air-conditioning load.
+- Sunbelt Metro West: mixed residential with growing rooftop solar adoption.
+
+Core products
+- FlexPeak tariff: a time-of-use retail plan that rewards customers for moving usage away
+  from the Sunbelt Metro summer peak.
+- EcoReward: a loyalty program that grants points for verified energy reductions, redeemable
+  against future bills.
+- Project Tidewatch: SER's flagship residential demand-response program (see dedicated brief).
+
+Leadership
+The demand-side coordination group is led by Program Manager Marcus Okafor, who owns the
+FlexPeak tariff design, the EcoReward incentive engine, and the Project Tidewatch rollout.
+
+Customer base
+SER serves a fictional 320,000 retail accounts across Sunbelt Metro. Roughly 40 percent are
+enrolled in the FlexPeak tariff, and EcoReward has issued points to over 110,000 households.
+
+All names, programs, and figures in this document are fictional and exist only to test
+multi-tenant data isolation.
